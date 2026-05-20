@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🛠️ Turbo Dreams Merch 🛠️: productos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/producto.css" />
+  <!-- Iconos Bootstrap (opcional) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+</head>
+<body>
+
+<header>
+  <h1>🛠️ Turbo Dreams Merch 🛠️</h1>
+  <p>Tienda de productos para entusiastas de la velocidad</p>
+</header>
+<nav>
+  <a href="inicio.html">Inicio</a>
+  <a href="productos.html" class="active">Productos</a>
+  <a href="nosotros.html">Sobre Nosotros</a>
+</nav>
+<section class="container" id="buscador">
+  <input type="text" id="searchInput" placeholder="Buscar productos..." oninput="filtrarProductos()" />
+</section>
+
+<section class="container" id="productos">
+  <h2>Productos Destacados</h2>
+
+  <div class="producto" data-id="1" data-precio="610.13" data-categoria="manual" data-nombre="Chaqueta de piloto de F1 RED BULL" data-disponible="true">
+    <img src="img/Redbull chaqueta.webp" alt="Chaqueta de piloto de F1 RED BULL" />
+    <h3>Chaqueta de piloto de F1 RED BULL</h3>
+    <p>Resistente y duradera, y con Estilo.</p>
+    <p><strong>Precio:</strong> Q610.13</p>
+    <button class="btn-comprar hover-add-btn" onclick="addToCart(1)">Añadir producto</button>
+  </div>
+
+  <div class="producto" data-id="2" data-precio="496.62" data-categoria="electrico" data-nombre="Chaqueta de F1 Vintage" data-disponible="true">
+    <img src="img/Ferrari unisex.webp" alt="Chaqueta de F1 Vintage" />
+    <h3>Chaqueta F1 Vintage | Parches Ferrari Bordados - Chaqueta de Carreras Unisex</h3>
+    <p>Resistente y duradera con Estilo.</p>
+    <p><strong>Precio:</strong> Q496.62</p>
+    <button class="btn-comprar hover-add-btn" onclick="addToCart(2)">Añadir producto</button>
+  </div>
+
+  <div class="producto" data-id="3" data-precio="533.85" data-categoria="manual" data-nombre="Chaqueta Audi Unisex" data-disponible="true">
+    <img src="img/Audi Chaqueta.webp" alt="Chaqueta Audi Unisex" />
+    <h3>Chaqueta Audi Unisex Adulto Bordada Algodón Acolchada F1 Chaqueta de Carreras</h3>
+    <p>Resistente y duradera con estilo.</p>
+    <p><strong>Precio:</strong> Q533.85</p>
+    <button class="btn-comprar hover-add-btn" onclick="addToCart(3)">Añadir producto</button>
+  </div>
+
+  <div class="producto" data-id="4" data-precio="457.58" data-categoria="manual" data-nombre="Chaqueta de F1 RedBull bordada" data-disponible="true">
+    <img src="img/Chumpas  (1).jpg" alt="Chaqueta de F1 RedBull bordada" />
+    <h3>Chaqueta de carreras vintage F1 para adultos, acolchada de algodón bordado, chaqueta Red Bull</h3>
+    <p>Resistente y duradera, y con Estilo.</p>
+    <p><strong>Precio:</strong> Q457.58</p>
+    <button class="btn-comprar hover-add-btn" onclick="addToCart(4)">Añadir producto</button>
+  </div>
+
+  <div class="producto" data-id="5" data-precio="610.13" data-categoria="manual" data-nombre="Chaqueta de F1 McLaren" data-disponible="true">
+    <img src="img/McLaren Chaqueta.webp" alt="Chaqueta de F1 McLaren" />
+    <h3>Chaqueta Castore McLaren Formula 1 Team Cremalera Completa Para Hombre Pequeña Naranja F1 Racing</h3>
+    <p>Resistente y duradera, y con Estilo.</p>
+    <p><strong>Precio:</strong> Q610.13</p>
+    <button class="btn-comprar hover-add-btn" onclick="addToCart(5)">Añadir producto</button>
+  </div>
+
+  <div class="producto" data-id="6" data-precio="533.49" data-categoria="manual" data-nombre="Chaqueta de Ford" data-disponible="true">
+    <img src="img/carreras chaqueta.webp" alt="Chaqueta de Ford" />
+    <h3>Chaqueta de carreras unisex para adultos parches bordados algodón acolchado Ford M-2XL</h3>
+    <p>Resistente y duradera, y con Estilo.</p>
+    <p><strong>Precio:</strong> Q533.49</p>
+    <button class="btn-comprar hover-add-btn" onclick="addToCart(6)">Añadir producto</button>
+  </div>
+</section>
+
+<section class="container" id="Legos">
+  <h2>Legos</h2>
+  <p>Elige los legos que desees.</p>
+  <div id="legosList"></div>
+  
+  <div class="producto" data-id="7" data-precio="610.13" data-categoria="manual" data-nombre="LEGO Technic Ferrari SF-24 F1" data-disponible="true">
+    <img src="img/Lego ferrari.jpg" alt="LEGO Technic Ferrari SF-24 F1" />
+    <h3>LEGO Technic Ferrari SF-24 F1 - Kit de construcción para adultos, mayores de 18 años con características realistas, manualidades de bricolaje Ferrari para exhibición, idea de regalo para fanáticos de la F1 </h3>
+    <p>Modelo realista de coche de F1: recrea la emoción de la temporada de F1 mientras exploras las funciones realistas del automóvil, incluyendo suspensión, dirección y un alerón ajustable.</p>
+    <p><strong>Precio:</strong> Q228.76</p>
+    <button class="btn-comprar hover-add-btn" onclick="addToCart(7)">Añadir producto</button>
+  </div>
+
+
+</section>
+
+<section class="container" id="combos">
+  <h2>Construye tu combo</h2>
+  <p>Elige tus productos y obtén descuentos especiales.</p>
+  <div id="comboList"></div>
+  <p><strong>Total combo:</strong> Q<span id="comboTotal">0.00</span></p>
+</section>
+
+<section id="carritoContainer" class="oculto">
+  <h3>Carrito</h3>
+  <ul id="carrito"></ul>
+  <p>Total: Q<span id="total">0.00</span></p>
+  <button onclick="toggleCart()" class="btn-cerrar">Cerrar carrito</button>
+</section>
+
+<!-- Botón flotante carrito -->
+<div class="floating-cart-btn" onclick="toggleCart()" title="Ver carrito">
+  <i class="bi bi-cart4" style="font-size: 28px;"></i>
+  <span id="cart-badge">0</span>
+</div>
+
+<!-- Botón modo nocturno (flotante, igual que en el resto del sitio) -->
+<button class="modo-btn" onclick="toggleNightMode()" title="Activar modo oscuro">
+  <span id="darkToggleIcon">⚡</span> Activa Turbo
+</button>
+
+<!-- Fondo partículas -->
+<canvas id="particles"></canvas>
+<!-- Botón flotante asistente -->
+<button id="asistenteBtn" class="floating-btn asistente-btn" title="Asistente 🛠️">💬</button>
+
+
+
+<!-- Íconos FontAwesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+
+<div id="asistenteChat" class="asistente-chat oculto" aria-live="polite" aria-label="Chat de asistente">
+  <div id="chatLog" class="chat-log"></div>
+  <div class="chat-input">
+    <input type="text" id="userInput" placeholder="Escribe tu pregunta..." aria-label="Entrada de mensaje"/>
+    <button id="sendBtn" aria-label="Enviar mensaje">Enviar</button>
+  </div>
+</div>
+
+<a href="https://wa.me/50212345678" class="floating-btn whatsapp" target="_blank" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+
+<a href="https://instagram.com/tu_usuario" class="floating-btn instagram" target="_blank" aria-label="Instagram">
+  <i class="fab fa-instagram"></i>
+</a>
+
+<script>
+  
+  const buttons = document.querySelectorAll('.floating-btn');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Añadir la clase .clicked para animar el clic
+      btn.classList.add('clicked');
+
+      // Quitar la clase después de que termine la animación para poder repetirla
+      setTimeout(() => {
+        btn.classList.remove('clicked');
+      }, 300); // Duración igual a la animación
+    });
+  });
+</script>
+
+<script src="script/producto.js"></script>
+</body>
+</html>
